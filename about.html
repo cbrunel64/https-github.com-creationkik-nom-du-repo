@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>À propos — CRÉATION KIK</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.about-intro{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;max-width:1200px;margin:0 auto}
+.about-portrait{position:relative;overflow:hidden}
+.about-portrait img{width:100%;height:550px;object-fit:cover;transition:transform .8s var(--ease-out-expo)}
+.about-portrait:hover img{transform:scale(1.04)}
+.about-portrait::after{content:'';position:absolute;top:1.5rem;left:1.5rem;right:-1.5rem;bottom:-1.5rem;border:1.5px solid var(--accent);z-index:-1;transition:transform .5s var(--ease-out-expo)}
+.about-portrait:hover::after{transform:translate(-8px,-8px)}
+.about-text h2{margin-bottom:1.5rem}
+.about-text p{margin-bottom:1.2rem}
+.highlight{font-family:var(--font-display);font-weight:600;font-size:1.15rem;color:var(--accent);line-height:1.6}
+
+.values-section{background:var(--dark);color:var(--cream);position:relative;overflow:hidden}
+.values-header{text-align:center;max-width:550px;margin:0 auto 4rem}
+.values-header .section-label{color:var(--accent-light)}
+.values-header .section-label::before{background:var(--accent-light)}
+.values-header .section-title{color:var(--cream)}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:1100px;margin:0 auto}
+.value-card{padding:2.5rem 2rem;border:1px solid rgba(255,255,255,.06);transition:all .6s var(--ease-out-expo);position:relative;overflow:hidden}
+.value-card::before{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent-light));transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease-out-expo)}
+.value-card:hover::before{transform:scaleX(1)}
+.value-card:hover{background:rgba(255,255,255,.04);transform:translateY(-6px)}
+.value-icon{font-size:2rem;margin-bottom:1.2rem;display:block;transition:transform .5s var(--ease-elastic)}
+.value-card:hover .value-icon{transform:scale(1.2) rotate(-5deg)}
+.value-card h3{font-family:var(--font-display);font-weight:600;font-size:1.2rem;margin-bottom:.8rem}
+.value-card p{font-size:.9rem;line-height:1.75;color:rgba(255,255,255,.45)}
+
+.about-images{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1200px;margin:0 auto}
+.img-block{overflow:hidden;position:relative;aspect-ratio:1}
+.img-block img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease-out-expo)}
+.img-block:hover img{transform:scale(1.08)}
+
+.cta-band{text-align:center;max-width:700px;margin:0 auto}
+.cta-band .section-text{margin:0 auto 2.5rem}
+
+@media(max-width:768px){
+  .about-intro{grid-template-columns:1fr;gap:3rem}
+  .about-portrait img{height:400px}
+  .values-grid{grid-template-columns:1fr}
+  .about-images{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="cursor-dot" id="cursor"></div><div class="cursor-ring" id="cursorRing"></div><div class="grain"></div>
+<nav id="nav"><a href="index.html" class="logo magnetic">Création KIK</a><ul class="nav-links" id="navLinks"><li><a href="about.html" class="active">À propos</a></li><li><a href="services.html">Services & Tarifs</a></li><li><a href="portfolio-print.html">Print</a></li><li><a href="photos.html">Photos</a></li><li><a href="videos.html">Vidéos</a></li><li><a href="contact.html">Contact</a></li></ul><button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button></nav>
+
+<section class="page-hero"><div class="hero-shape hero-shape-1"></div><div class="hero-shape hero-shape-2"></div><div class="hero-shape hero-shape-3"></div><div class="page-hero-content"><p class="page-hero-tag">Qui suis-je</p><h1>Créer. Imaginer.<br><em>Donner vie.</em></h1></div></section>
+
+<div class="scroll-text-band"><div class="scroll-text-track"><span>Triple compétence</span><span>·</span><span><em>Graphisme</em></span><span>·</span><span>Photographie</span><span>·</span><span><em>Vidéo</em></span><span>·</span><span>Cohérence visuelle</span><span>·</span><span>Triple compétence</span><span>·</span><span><em>Graphisme</em></span><span>·</span><span>Photographie</span><span>·</span><span><em>Vidéo</em></span><span>·</span><span>Cohérence visuelle</span><span>·</span></div></div>
+
+<section><div class="about-intro">
+  <div class="about-portrait parallax-img reveal-left"><img src="https://www.creationkik.fr/wp-content/uploads/go-x/u/62edf1f9-ffea-46a8-99f6-f5d5e2832f1b/l29,t0,w528,h704/image.png" alt="Camille" loading="lazy"></div>
+  <div class="about-text reveal-right">
+    <p class="section-label">Enchanté</p>
+    <h2 class="section-title">Moi, c'est Camille.</h2>
+    <p class="highlight">Graphiste freelance, je tisse le fil conducteur visuel qui rend votre communication unique.</p>
+    <p class="section-text">Mon atout : une triple compétence. Graphisme, photographie et vidéo — je maîtrise toute la chaîne de l'image. Pas besoin de jongler entre plusieurs prestataires.</p>
+    <p class="section-text">Basée en Île-de-France, j'accompagne les entrepreneurs et les marques qui veulent se démarquer. J'aime travailler dans l'échange pour transformer vos idées — même les plus floues — en résultats concrets.</p>
+    <br><a href="contact.html" class="btn btn-primary magnetic">Parlons de votre projet</a>
+  </div>
+</div></section>
+
+<section class="values-section"><div class="values-header reveal"><p class="section-label">Ma démarche</p><h2 class="section-title">Ce qui guide<br>chaque projet</h2></div>
+<div class="values-grid stagger">
+  <div class="value-card tilt reveal"><span class="value-icon">◎</span><h3>Écoute</h3><p>Chaque projet commence par un vrai échange. Je prends le temps de comprendre votre univers avant de toucher à un seul pixel.</p></div>
+  <div class="value-card tilt reveal"><span class="value-icon">△</span><h3>Cohérence</h3><p>Print, web, photo, vidéo : tous vos supports parlent d'une seule voix. Votre image reste mémorable partout.</p></div>
+  <div class="value-card tilt reveal"><span class="value-icon">□</span><h3>Simplicité</h3><p>Un seul interlocuteur, un processus clair. De la conception à la livraison, sans mauvaise surprise.</p></div>
+</div></section>
+
+<section><div class="about-images stagger">
+  <div class="img-block reveal"><img src="https://www.creationkik.fr/wp-content/uploads/go-x/u/b4f03dc0-f08a-4ae9-ba3f-dd92bece9450/l0,t94,w1024,h1024/image-768x768.png" alt="Réalisation" loading="lazy"></div>
+  <div class="img-block reveal"><img src="https://www.creationkik.fr/wp-content/uploads/go-x/u/8b94dc3b-b151-40bb-aefe-ed3659e43d34/l0,t0,w1080,h1080/image-768x768.png" alt="Réalisation" loading="lazy"></div>
+  <div class="img-block reveal"><img src="https://www.creationkik.fr/wp-content/uploads/go-x/u/65c94ac0-2993-4dcc-9a47-0b95e36f12d3/l0,t523,w1126,h1126/image-768x768.jpg" alt="Réalisation" loading="lazy"></div>
+</div></section>
+
+<section><div class="cta-band reveal"><p class="section-label">Prêt à collaborer ?</p><h2 class="section-title">Vous avez une histoire à raconter ?<br>Mettons-la en images.</h2><p class="section-text">Décrivez-moi votre projet, je vous réponds sous 24 heures.</p><a href="contact.html" class="btn btn-primary magnetic">Me contacter</a></div></section>
+
+<footer><div class="footer-inner"><span class="footer-logo">Création KIK</span><div class="footer-links"><a href="about.html">À propos</a><a href="services.html">Services</a><a href="portfolio-print.html">Print</a><a href="photos.html">Photos</a><a href="videos.html">Vidéos</a><a href="contact.html">Contact</a></div><p class="footer-copy">© 2026 Création KIK — Tous droits réservés · <a href="https://www.creationkik.fr/mentions-legales/">Mentions légales</a></p></div></footer>
+<script src="main.js"></script>
+</body></html>

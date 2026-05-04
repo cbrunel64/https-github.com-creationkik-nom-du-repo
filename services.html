@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services & Tarifs — CRÉATION KIK</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.process-section{max-width:900px;margin:0 auto}
+.process-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:3rem;margin-top:3rem}
+.process-step{text-align:center;padding:2rem;transition:transform .5s var(--ease-out-expo)}
+.process-step:hover{transform:translateY(-6px)}
+.step-number{font-family:var(--font-display);font-weight:600;font-size:3.5rem;color:var(--accent);opacity:.25;margin-bottom:1rem;transition:opacity .5s}
+.process-step:hover .step-number{opacity:.5}
+.process-step h3{font-family:var(--font-display);font-weight:600;font-size:1.15rem;margin-bottom:.7rem}
+.process-step p{font-size:.9rem;line-height:1.75;color:var(--muted)}
+/* Connector lines */
+.process-steps::before{content:'';position:absolute;top:50%;left:33%;right:33%;height:1px;background:var(--warm)}
+
+.rate-banner{background:var(--dark);color:var(--cream);text-align:center;padding:5rem 2rem;position:relative;overflow:hidden}
+.rate-banner::before{content:'';position:absolute;top:-100px;left:-100px;width:350px;height:350px;border-radius:50%;background:rgba(176,125,98,.08);animation:floatShape 20s ease-in-out infinite}
+.rate-grid{display:flex;gap:5rem;justify-content:center;flex-wrap:wrap;margin-top:2.5rem}
+.rate-item{text-align:center}
+.rate-value{font-family:var(--font-display);font-weight:600;font-size:3rem;color:var(--accent-light)}
+.rate-label{font-size:.8rem;color:rgba(255,255,255,.4);margin-top:.3rem;letter-spacing:.12em;text-transform:uppercase}
+.rate-note{font-size:.88rem;color:rgba(255,255,255,.35);margin-top:2.5rem;max-width:550px;margin-left:auto;margin-right:auto;line-height:1.75}
+
+.pricing-section{max-width:1100px;margin:0 auto}
+.pricing-category{margin-bottom:4rem}
+.pricing-category h3{font-family:var(--font-display);font-weight:600;font-size:1.4rem;margin-bottom:.5rem;padding-bottom:1rem;border-bottom:1.5px solid var(--warm);display:flex;align-items:center;gap:.7rem}
+.cat-icon{font-size:1.1rem;opacity:.6}
+.pricing-list{list-style:none}
+.pricing-list li{display:flex;justify-content:space-between;align-items:baseline;padding:1rem 0;border-bottom:1px solid rgba(0,0,0,.05);transition:all .4s var(--ease-out-expo)}
+.pricing-list li:hover{background:rgba(176,125,98,.04);padding-left:.8rem;padding-right:.8rem}
+.item-name{font-size:.95rem;color:var(--ink)}
+.item-detail{font-size:.82rem;color:var(--muted);display:block;margin-top:.15rem}
+.item-price{font-family:var(--font-display);font-weight:600;font-size:.95rem;color:var(--accent);white-space:nowrap}
+
+.pricing-cta{text-align:center;background:var(--warm);padding:5rem 2rem}
+.pricing-cta .section-text{margin:0 auto 2rem}
+
+@media(max-width:768px){.process-steps{grid-template-columns:1fr;gap:2rem}}
+</style>
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="cursor-dot" id="cursor"></div><div class="cursor-ring" id="cursorRing"></div><div class="grain"></div>
+<nav id="nav"><a href="index.html" class="logo magnetic">Création KIK</a><ul class="nav-links" id="navLinks"><li><a href="about.html">À propos</a></li><li><a href="services.html" class="active">Services & Tarifs</a></li><li><a href="portfolio-print.html">Print</a></li><li><a href="photos.html">Photos</a></li><li><a href="videos.html">Vidéos</a></li><li><a href="contact.html">Contact</a></li></ul><button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button></nav>
+
+<section class="page-hero"><div class="hero-shape hero-shape-1"></div><div class="hero-shape hero-shape-2"></div><div class="page-hero-content"><p class="page-hero-tag">Services & Tarifs</p><h1>Des prestations claires,<br><em>des prix justes.</em></h1></div></section>
+
+<section><div class="process-section reveal">
+  <p class="section-label">Comment ça marche</p><h2 class="section-title">3 étapes pour lancer votre projet</h2>
+  <div class="process-steps stagger">
+    <div class="process-step tilt reveal"><div class="step-number">01</div><h3>Prise de contact</h3><p>Décrivez votre besoin par téléphone, mail ou formulaire.</p></div>
+    <div class="process-step tilt reveal"><div class="step-number">02</div><h3>Brief & échange</h3><p>On cadre le projet : objectifs, cible, délais, budget.</p></div>
+    <div class="process-step tilt reveal"><div class="step-number">03</div><h3>Devis personnalisé</h3><p>Une offre sur-mesure adaptée à vos besoins.</p></div>
+  </div>
+</div></section>
+
+<section class="rate-banner"><div class="reveal">
+  <p class="section-label" style="color:var(--accent-light)">Tarifs de base</p>
+  <h2 class="section-title" style="color:var(--cream)">Forfaits horaire & journalier</h2>
+  <div class="rate-grid">
+    <div class="rate-item"><div class="rate-value"><span data-count="50" data-suffix=" €">0 €</span></div><div class="rate-label">Par heure</div></div>
+    <div class="rate-item"><div class="rate-value"><span data-count="400" data-suffix=" €">0 €</span></div><div class="rate-label">Par jour</div></div>
+  </div>
+  <p class="rate-note">Tarifs indicatifs. Le montant final dépend du contrat et de sa durée.</p>
+</div></section>
+
+<section><div class="pricing-section">
+<div class="reveal"><p class="section-label">Grille tarifaire</p><h2 class="section-title">Tarifs par prestation</h2><p class="section-text" style="margin-bottom:3rem">Chaque projet est unique — contactez-moi pour un devis personnalisé.</p></div>
+
+<div class="pricing-category reveal-rotate"><h3><span class="cat-icon">◉</span> Print</h3><ul class="pricing-list">
+<li><div><span class="item-name">Carte de visite</span></div><span class="item-price">à partir de 200 €</span></li>
+<li><div><span class="item-name">Papeterie</span><span class="item-detail">Papier en-tête, enveloppes…</span></div><span class="item-price">à partir de 60 €</span></li>
+<li><div><span class="item-name">Affiche</span></div><span class="item-price">à partir de 300 €</span></li>
+<li><div><span class="item-name">Flyer recto/verso</span></div><span class="item-price">à partir de 400 €</span></li>
+<li><div><span class="item-name">Dépliant / Plaquette</span></div><span class="item-price">à partir de 400 €</span></li>
+<li><div><span class="item-name">Brochure</span><span class="item-detail">≈ 16 pages</span></div><span class="item-price">à partir de 1 200 €</span></li>
+<li><div><span class="item-name">Roll-Up</span></div><span class="item-price">à partir de 400 €</span></li>
+<li><div><span class="item-name">Signalétique / Vitrophanie</span></div><span class="item-price">à partir de 400 €</span></li>
+<li><div><span class="item-name">Faire-part / Invitation</span></div><span class="item-price">à partir de 360 €</span></li>
+<li><div><span class="item-name">Packaging / Étiquette</span></div><span class="item-price">à partir de 360 €</span></li>
+</ul></div>
+
+<div class="pricing-category reveal-rotate"><h3><span class="cat-icon">◎</span> Identité visuelle</h3><ul class="pricing-list">
+<li><div><span class="item-name">Logotype</span><span class="item-detail">Création ou refonte — min. 3 axes créatifs</span></div><span class="item-price">à partir de 560 €</span></li>
+<li><div><span class="item-name">Charte graphique complète</span><span class="item-detail">Logo, typos, couleurs, règles d'utilisation</span></div><span class="item-price">à partir de 1 200 €</span></li>
+</ul></div>
+
+<div class="pricing-category reveal-rotate"><h3><span class="cat-icon">◈</span> Web & Réseaux sociaux</h3><ul class="pricing-list">
+<li><div><span class="item-name">Bannière animée</span></div><span class="item-price">à partir de 120 €</span></li>
+<li><div><span class="item-name">Visuel réseaux sociaux</span></div><span class="item-price">à partir de 90 €</span></li>
+<li><div><span class="item-name">Newsletter</span></div><span class="item-price">à partir de 400 €</span></li>
+</ul></div>
+
+<div class="pricing-category reveal-rotate"><h3><span class="cat-icon">✦</span> Illustration</h3><ul class="pricing-list">
+<li><div><span class="item-name">Illustration</span></div><span class="item-price">à partir de 200 €</span></li>
+<li><div><span class="item-name">Infographie vectorielle</span></div><span class="item-price">à partir de 780 €</span></li>
+<li><div><span class="item-name">Vectorisation d'image</span></div><span class="item-price">à partir de 40 €</span></li>
+</ul></div>
+
+<div class="pricing-category reveal-rotate"><h3><span class="cat-icon">◐</span> Photographie</h3><ul class="pricing-list">
+<li><div><span class="item-name">Séance photo</span><span class="item-detail">Retouches comprises</span></div><span class="item-price">700 € / jour — 360 € / ½ j.</span></li>
+<li><div><span class="item-name">Détourage photo</span></div><span class="item-price">à partir de 45 €</span></li>
+<li><div><span class="item-name">Photomontage</span></div><span class="item-price">à partir de 45 €</span></li>
+</ul></div>
+
+<div class="pricing-category reveal-rotate"><h3><span class="cat-icon">▶</span> Vidéo</h3><ul class="pricing-list">
+<li><div><span class="item-name">Prise de vue vidéo</span></div><span class="item-price">700 € / jour — 360 € / ½ j.</span></li>
+<li><div><span class="item-name">Montage vidéo</span><span class="item-detail">≈ 90 secondes</span></div><span class="item-price">à partir de 1 440 €</span></li>
+</ul></div>
+
+<div class="pricing-category reveal-rotate"><h3><span class="cat-icon">◇</span> Motion Design</h3><ul class="pricing-list">
+<li><div><span class="item-name">Création complète</span><span class="item-detail">≈ 50 secondes</span></div><span class="item-price">à partir de 400 €</span></li>
+<li><div><span class="item-name">Tips vidéo</span></div><span class="item-price">à partir de 90 €</span></li>
+</ul></div>
+</div></section>
+
+<div class="pricing-cta"><div class="reveal"><p class="section-label">Prêt à démarrer ?</p><h2 class="section-title">Demandez votre devis gratuit</h2><p class="section-text">Chaque projet mérite un chiffrage précis.</p><a href="contact.html" class="btn btn-primary magnetic">Demander un devis</a></div></div>
+
+<footer><div class="footer-inner"><span class="footer-logo">Création KIK</span><div class="footer-links"><a href="about.html">À propos</a><a href="services.html">Services</a><a href="portfolio-print.html">Print</a><a href="photos.html">Photos</a><a href="videos.html">Vidéos</a><a href="contact.html">Contact</a></div><p class="footer-copy">© 2026 Création KIK — Tous droits réservés · <a href="https://www.creationkik.fr/mentions-legales/">Mentions légales</a></p></div></footer>
+<script src="main.js"></script>
+</body></html>
